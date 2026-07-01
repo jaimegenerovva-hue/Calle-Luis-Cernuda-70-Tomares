@@ -1,0 +1,6 @@
+{
+  "name": "Residencia Altos del Mar",
+  "description": "Exclusiva promoción de obra nueva en primera línea de golf en Marbella con diseño contemporáneo y vistas incomparables.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-gold: #F43434; /* Comprarcasa Red */
+  --color-gold-dark: #C91C1C; /* Darker Corporate Red */
+  --color-gold-light: #FA5858; /* Lighter Corporate Red */
+  --color-charcoal: #0f172a; /* Slate 900 */
+  --color-dark-pitch: #020617; /* Slate 950 */
+  --color-luxury-beige: #ffffff; /* Crisp white background */
+  --color-luxury-warm: #f8fafc; /* Slate 50 panel contrast */
+  --color-luxury-white: #ffffff;
+
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-luxury-beige);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+}
+
+/* Custom scrollbar for an elegant minimal feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-luxury-warm);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-400);
+}
+
+/* Reveal transition effects using Intersection Observer */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.0s cubic-bezier(0.16, 1, 0.3, 1), transform 1.0s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lightbox backdrop blur */
+.lightbox-overlay {
+  backdrop-filter: blur(16px);
+}
